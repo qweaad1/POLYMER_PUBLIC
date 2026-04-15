@@ -49,7 +49,7 @@ void send(const std::string& path) {
        
         for(size_t i =0;i<path.length();++i){
         if(path[i]==' '){
-            path[i]=='\ ';
+            path[i]=='\\ ';
         }
         }
     std::string command = "curl -T " + path + " ftp://" + user + ":" + pass + "@" + ftp_server + remote_folder + "";
