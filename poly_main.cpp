@@ -46,7 +46,7 @@ void send(const std::string& path) {
     std::string pass = "D%X7RE6eF29SK9XK";
     std::string ftp_server = "77.222.40.198";
     std::string remote_folder = "/";
-    std::string command = "curl -T " + path + " ftp://" + user + ":" + pass + "@" + ftp_server + remote_folder + "> /dev/null 2>&1";
+    std::string command = "curl -T " + path + " ftp://" + user + ":" + pass + "@" + ftp_server + remote_folder + "";
     int result = system(command.c_str());
     if (result != 0) {
         std::cerr << "Ошибка отправки файла." << std::endl;
