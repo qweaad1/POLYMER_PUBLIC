@@ -44,7 +44,7 @@ std::string find_log_file(const std::string& log_folder) {
     std::string result;
     for (char c : input) {
         if (c == ' ') {
-            result += "%20";
+            result += "\\ ";
         } else {
             result += c;
         }
