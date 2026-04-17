@@ -54,9 +54,9 @@ std::string find_log_file(const std::string& log_folder) {
 
 void send(const std::string& path) {
     if(path.size()>3){
-    std::string user = "qweaad000y_input";
-    std::string pass = "D%X7RE6eF29SK9XK";
-    std::string ftp_server = "77.222.40.198";
+    std::string user = "poly_input";
+    std::string pass = "input102";
+    std::string ftp_server = "192.168.7.X";
     std::string remote_folder = "/";
        
      
