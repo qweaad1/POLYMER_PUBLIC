@@ -56,7 +56,7 @@ void send(const std::string& path) {
     if(path.size()>3){
     std::string user = "poly_input";
     std::string pass = "input102";
-    std::string ftp_server = "192.168.227.25";
+    std::string ftp_server = "192.168.227.39";
     std::string remote_folder = "/";
        
      
